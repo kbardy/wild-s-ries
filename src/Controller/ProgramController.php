@@ -31,4 +31,16 @@ Class ProgramController extends AbstractController
      
          ]);
     }
+
+     /**
+
+      * Correspond à la route /program/new et au name "program_show"
+
+      * @Route("/program/{id}",  requirements={"id"="\d+"}, methods={"GET"}, name="program_show")
+
+      */
+    public function show(): Response
+    {
+    return $this->render('program/show.html.twig', ['id' => 4]);
+    }
 }
